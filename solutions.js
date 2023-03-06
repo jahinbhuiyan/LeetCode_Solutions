@@ -13,4 +13,24 @@ var twoSum = function(nums, target) {
  
     }
  };
+ 
+
+ // numbers Palindrome
+
+ var isPalindrome = function(x) {
+    //guess if it's a uni digit  integer, it's automatically a palindrome
+    if(x < 0 || (x % 10 == 0 && x != 0)) {
+        return false;
+    }
+
+    // ^^^ adding this line of code brings down runtime from 184ms to 125ms
+    
+    if(x.toString().split('').reverse().join('') === x.toString())
+    {
+        return true
+    }else{
+        return false
+    }
+    
+};
 
